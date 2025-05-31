@@ -1,0 +1,2662 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition:0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color:#b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width: 995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+    }
+    
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #000000;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h1 span {
+    color: #b74b4b;
+    font-size: inherit;
+    font-weight: 800;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.7rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: wheat;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: wheat;
+    background-color: black;
+    letter-spacing: 0.3rem;
+    border-radius: 4rem;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.03);
+    color: black;
+    background-color: #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.typing-text span:last-child {
+    position: relative;
+    display: inline-block;
+    min-width: 250px; 
+}
+
+.typing-text span:last-child::before{
+    content: "Software Developer";
+    color: #b74b4b;
+    animation: words 18s infinite;
+}
+
+.typing-text span:last-child::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8; 
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Backend Developer ";
+    }
+    25%, 45%{
+        content: "Gen AI Developer ";
+    }
+    50%, 70%{
+        content: "Cybersecurity Analyst ";
+    }
+    75%, 95%{
+        content: "Cloud Enthusiast ";
+    }
+    100%{
+        content: "Backend Developer ";
+    }
+}
+
+@media(max-width:1000px){
+    .home{
+        gap:4rem;
+    }
+}   
+
+@media(max-width: 995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/* All sections black */
+.skills,
+.education,
+.experience,
+.contact {
+    background-color: #000000;
+}
+
+/* General Section Styling */
+.heading {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.heading span {
+    color: #b74b4b;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.skills-box {
+    background-color: #0a0a0a;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.skills-box h3 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+}
+
+.skill {
+    margin-bottom: 2rem;
+}
+
+.skill span {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 1rem;
+    background-color: #333;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #b74b4b;
+    border-radius: 0.5rem;
+    transition: width 2s ease;
+}
+
+/* Education Section */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.education-box {
+    background-color: #0a0a0a;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+}
+
+.education-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.year {
+    font-size: 1.5rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.education-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.education-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* Experience Section */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experience-box {
+    background-color: #0a0a0a;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 2px solid #b74b4b;
+    border-left: 5px solid #b74b4b;
+    transition: 0.3s ease;
+}
+
+.experience-box:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.experience-content h3 {
+    font-size: 2.2rem;
+    color: #b74b4b;
+    margin-bottom: 0.5rem;
+}
+
+.experience-content h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h3 {
+    font-size: 3.5rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.contact-content > p {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    color: #ccc;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+.contact-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5rem 3.5rem;
+    border-radius: 2rem;
+    border: 2px solid;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 15rem;
+}
+
+.contact-btn i {
+    font-size: 4rem;
+}
+
+.contact-btn span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Call Button */
+.call-btn {
+    background-color: transparent;
+    border-color: #EA4335;
+    color: #EA4335;
+}
+
+.call-btn:hover {
+    background-color: #EA4335;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(234, 67, 53, 0.3);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background-color: transparent;
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.whatsapp-btn:hover {
+    background-color: #25D366;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+}
+
+/* Gmail Button */
+.gmail-btn {
+    background-color: transparent;
+    border-color: #EA4335;
+    color: #EA4335;
+}
+
+.gmail-btn:hover {
+    background-color: #EA4335;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(234, 67, 53, 0.3);
+}
+
+/* Contact Details */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-details p {
+    font-size: 1.6rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-details i {
+    color: #b74b4b;
+    font-size: 1.8rem;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #000000;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 3rem;
+}
+
+.project-box {
+    background-color: #0a0a0a;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(183, 75, 75, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.project-box:hover::before {
+    left: 100%;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.project-box h3 {
+    font-size: 2.3rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.project-date {
+    font-size: 1.4rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+}
+
+.project-box ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-box ul li {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.project-box ul li::before {
+    content: '▹';
+    color: #b74b4b;
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem;
+}
+
+.tech-stack {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: wheat;
+    background-color: rgba(183, 75, 75, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.tech-stack strong {
+    color: #b74b4b;
+    font-style: normal;
+}
+
+/* Others Section */
+.others {
+    background-color: #000000;
+}
+
+.others-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.others-category h3 {
+    font-size: 2.8rem;
+    color: #b74b4b;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.others-category h3 i {
+    font-size: 2.5rem;
+}
+
+/* Certification Boxes */
+.certification-box {
+    background-color: #0a0a0a;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid #b74b4b;
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(183, 75, 75, 0.1);
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+.certification-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.cert-header h4 {
+    font-size: 2rem;
+    color: white;
+    flex: 1;
+}
+
+.cert-date {
+    font-size: 1.4rem;
+    color: #b74b4b;
+    white-space: nowrap;
+}
+
+.cert-issuer {
+    font-size: 1.6rem;
+    color: wheat;
+    margin-bottom: 0.5rem;
+}
+
+.cert-id {
+    font-size: 1.4rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* Workshop Boxes */
+.workshop-box {
+    background-color: #0a0a0a;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid #b74b4b;
+    border-left: 5px solid #b74b4b;
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.workshop-box:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.workshop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.workshop-header h4 {
+    font-size: 2rem;
+    color: #b74b4b;
+    flex: 1;
+}
+
+.workshop-date {
+    font-size: 1.4rem;
+    color: #999;
+    white-space: nowrap;
+}
+
+.workshop-org {
+    font-size: 1.6rem;
+    color: wheat;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.workshop-box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.workshop-box p:not(.workshop-org) {
+    padding-left: 1.5rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #0a0a0a;
+    margin: 10% auto;
+    padding: 4rem;
+    border: 2px solid #b74b4b;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 2rem;
+    position: relative;
+    animation: slideIn 0.3s;
+}
+
+.close {
+    color: #b74b4b;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-content h2 {
+    font-size: 3rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hire-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.hire-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: black;
+    border: 2px solid #b74b4b;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.hire-btn:hover {
+    background-color: #b74b4b;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(183, 75, 75, 0.3);
+}
+
+.hire-btn i {
+    font-size: 3rem;
+    color: #b74b4b;
+}
+
+.hire-btn:hover i {
+    color: white;
+}
+
+.hire-btn span {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #b74b4b;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* REMOVE OLD TECH STACK STYLING */
+.experience-content p:last-child {
+    /* Remove all previous styling */
+    all: unset;
+}
+
+/* NEW TECH STACK DESIGN */
+.tech-stack {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.tech-stack strong {
+    color: #b74b4b;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.tech-pill {
+    background-color: rgba(183, 75, 75, 0.1);
+    color: wheat;
+    padding: 0.6rem 1.6rem;
+    border-radius: 2rem;
+    border: 1.5px solid #b74b4b;
+    font-size: 1.4rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tech-pill:hover {
+    background-color: rgba(183, 75, 75, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(183, 75, 75, 0.3);
+    border-color: #d35656;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .tech-stack {
+        margin-top: 1.2rem;
+    }
+    
+    .tech-stack strong {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .tech-items {
+        gap: 0.6rem;
+        justify-content: center;  /* Center pills on mobile */
+    }
+    
+    .tech-pill {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-items {
+        gap: 0.5rem;
+    }
+    
+    .tech-pill {
+        font-size: 1.1rem;
+        padding: 0.4rem 1rem;
+        border-radius: 1.5rem;
+    }
+}
+
+/* Dark mode enhancement for better visibility */
+@media (prefers-color-scheme: dark) {
+    .tech-pill {
+        background-color: rgba(183, 75, 75, 0.15);
+    }
+    
+    .tech-pill:hover {
+        background-color: rgba(183, 75, 75, 0.25);
+    }
+}
+
+/* Optional: Add subtle animation on page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-pill {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.tech-pill:nth-child(1) { animation-delay: 0.1s; }
+.tech-pill:nth-child(2) { animation-delay: 0.2s; }
+.tech-pill:nth-child(3) { animation-delay: 0.3s; }
+.tech-pill:nth-child(4) { animation-delay: 0.4s; }
+.tech-pill:nth-child(5) { animation-delay: 0.5s; }
+/* Section scroll margin */
+section[id] {
+    scroll-margin-top: 20px; 
+}
+
+/* Responsive Design - Mobile Optimization */
+@media (max-width: 995px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .others-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container,
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .contact-btn {
+        width: 100%;
+        max-width: 25rem;
+    }
+    
+    .contact-details {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+       .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-box {
+        padding: 2rem;
+    }
+    
+    .experience-box:hover {
+        transform: translateX(0) translateY(-5px);
+    }
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 4rem;
+    }
+    
+    .home {
+        padding-top: 7rem;
+    }
+    
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+    
+    .home-content p {
+        font-size: 1.5rem;
+    }
+    
+    .skills-box h3,
+    .education-content h3,
+    .experience-content h3 {
+        font-size: 2rem;
+    }
+    
+    .skills-box,
+    .education-box,
+    .experience-box {
+        padding: 2rem;
+    }
+    
+    .others-category h3 {
+        font-size: 2.2rem;
+    }
+    
+    .certification-box,
+    .workshop-box {
+        padding: 2rem;
+    }
+    
+    .cert-header,
+    .workshop-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .cert-header h4,
+    .workshop-header h4 {
+        font-size: 1.8rem;
+    }
+    
+    .cert-date,
+    .workshop-date {
+        font-size: 1.3rem;
+    }
+    
+    .cert-issuer,
+    .workshop-org {
+        font-size: 1.5rem;
+    }
+    
+    .workshop-box p {
+        font-size: 1.4rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+    }
+    
+    .modal-content {
+        margin: 15% auto;
+        padding: 2.5rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hire-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .hire-btn {
+        padding: 1.5rem;
+    }
+    
+    .hire-btn i {
+        font-size: 2.5rem;
+    }
+    
+    .project-box h3 {
+        font-size: 2rem;
+    }
+    
+    .project-box ul li {
+        font-size: 1.4rem;
+    }
+    
+    .contact-content h3 {
+        font-size: 2.8rem;
+    }
+    
+    .contact-btn {
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin: 2rem 0.8rem;
+    }
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 996px) {
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    
+    .home-content h3 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    section[id] {
+        scroll-margin-top: 15px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .home-content h1 {
+        font-size: 5.5rem;
+    }
+    
+    .home-content h3 {
+        font-size: 3.8rem;
+    }
+}
+
+
+
+
+/* Achievement Section - Modern Tab Design */
+/* Glassmorphism Style with Flip - Fixed Version */
+.achievements {
+    background: #000000; /* Pure black background */
+    position: relative;
+    overflow: hidden;
+    padding-top: 5rem; /* Match other sections padding */
+}
+
+/* Remove or comment out the gradient background */
+/*
+.achievements::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(183, 75, 75, 0.1) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+}
+*/
+
+.achievements-container {
+    position: relative;
+    z-index: 1;
+}
+
+.glass-carousel {
+    padding: 4rem 0;
+}
+
+.carousel-track {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Glass Card Container - Mobile First */
+.glass-card {
+    width: 100%;
+    height: 35rem;
+    perspective: 1000px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Card Inner - This is what flips */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+/* Flip state */
+.glass-card.flipped .card-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+/* Card Front and Back - Fixed blur issue */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: rgba(26, 26, 26, 0.9); /* Less transparent for mobile */
+    backdrop-filter: blur(5px); /* Reduced blur for better performance */
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(183, 75, 75, 0.4);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Mobile specific - even less blur */
+@media (max-width: 768px) {
+    .card-front, .card-back {
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        background: rgba(26, 26, 26, 0.95); /* More opaque on mobile */
+    }
+}
+
+/* Shimmer effect for cards */
+.card-front::before, .card-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(183, 75, 75, 0.2), transparent);
+    transition: 0.7s;
+}
+
+.glass-card:hover .card-front::before,
+.glass-card:hover .card-back::before {
+    left: 100%;
+}
+
+/* Card Front Specific */
+.card-front {
+    z-index: 2;
+    justify-content: center;
+}
+
+/* Card Back Specific */
+.card-back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background: rgba(26, 26, 26, 0.95);
+    border-color: #b74b4b;
+    padding: 1.5rem;
+}
+
+/* Front Card Elements - Mobile */
+.card-icon {
+    width: 7rem;
+    height: 7rem;
+    background: linear-gradient(135deg, #b74b4b, #d35656);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(183, 75, 75, 0.3);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.card-icon i {
+    font-size: 3rem;
+    color: white;
+}
+
+.card-front h3 {
+    font-size: 2.2rem;
+    color: #b74b4b;
+    margin-bottom: 0.5rem;
+}
+
+.card-hint {
+    font-size: 1.3rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 1rem;
+    opacity: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Back Card Elements - Mobile */
+.card-back h3 {
+    font-size: 1.8rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #b74b4b;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Scrollable content container */
+.card-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    padding-right: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar */
+.card-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.card-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background: #b74b4b;
+    border-radius: 2px;
+}
+
+/* Achievement Items - Mobile */
+.achievement-item {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-left: 3px solid #b74b4b;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.achievement-item:last-child {
+    margin-bottom: 0;
+}
+
+.achievement-item:active {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(0.98);
+}
+
+.achievement-item h4 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-item p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+/* Scroll indicator */
+.card-back::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-back.has-scroll::after {
+    opacity: 1;
+}
+
+/* Larger Phones (6.5+ inch) */
+@media (min-width: 390px) {
+    .glass-card {
+        height: 38rem;
+    }
+    
+    .card-icon {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .card-icon i {
+        font-size: 3.5rem;
+    }
+    
+    .card-front h3 {
+        font-size: 2.4rem;
+    }
+    
+    .achievement-item {
+        padding: 1.2rem;
+    }
+}
+
+/* Small Tablets */
+@media (min-width: 600px) {
+    .carousel-track {
+        padding: 0 2rem;
+    }
+    
+    .glass-card {
+        height: 40rem;
+    }
+    
+    .card-front, .card-back {
+        padding: 2rem;
+        background: rgba(26, 26, 26, 0.9);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    .card-back {
+        padding: 2rem;
+    }
+    
+    .card-back h3 {
+        font-size: 2rem;
+    }
+    
+    .achievement-item h4 {
+        font-size: 1.5rem;
+    }
+    
+    .achievement-item p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .carousel-track {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .glass-card {
+        height: 42rem;
+    }
+    
+    .card-front, .card-back {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .card-back {
+        background: rgba(183, 75, 75, 0.1);
+    }
+    
+    .card-icon {
+        width: 9rem;
+        height: 9rem;
+    }
+    
+    .card-icon i {
+        font-size: 4rem;
+    }
+    
+    .card-front h3 {
+        font-size: 2.6rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .carousel-track {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        padding: 0;
+    }
+    
+    .glass-card {
+        height: 45rem;
+    }
+    
+    .card-front, .card-back {
+        padding: 2.5rem;
+        border-radius: 2rem;
+    }
+    
+    .card-icon {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .card-icon i {
+        font-size: 4.5rem;
+    }
+    
+    .card-front h3 {
+        font-size: 2.8rem;
+    }
+    
+    .card-hint {
+        animation: none;
+        opacity: 0.7;
+    }
+    
+    .card-back h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .achievement-item {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    
+    .achievement-item:hover {
+        background: rgba(0, 0, 0, 0.5);
+        transform: translateX(5px);
+    }
+    
+    .achievement-item h4 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .achievement-item p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .glass-card {
+        height: 48rem;
+    }
+    
+    .card-front, .card-back {
+        padding: 3rem;
+    }
+}
+
+/* Additional Mobile Fixes */
+@supports (-webkit-touch-callout: none) {
+    /* iOS specific fixes */
+    .card-inner {
+        -webkit-transform-style: preserve-3d;
+    }
+    
+    .card-front, .card-back {
+        -webkit-backface-visibility: hidden;
+    }
+    
+    .glass-card.flipped .card-inner {
+        -webkit-transform: rotateY(180deg);
+    }
+    
+    .card-back {
+        -webkit-transform: rotateY(180deg);
+    }
+}
+
+/* Prevent text selection on mobile */
+.glass-card {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+    .glass-card {
+        min-height: 35rem;
+        touch-action: manipulation;
+    }
+    
+    .achievement-item {
+        min-height: 6rem;
+    }
+}
+
+/* Fix for Android Chrome */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .card-inner {
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+}
+
+/* Remove blur animation that was causing issues */
+@keyframes rotate {
+    /* Removed to improve performance */
+}
+
+/* LOADER STYLES */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-inner {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.loader-inner span {
+    width: 1rem;
+    height: 1rem;
+    background-color: #b74b4b;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loader-inner span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.loader-inner span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* FOOTER STYLES */
+.footer {
+    background-color: #0a0a0a;
+    padding: 2rem 9%;
+    border-top: 1px solid #b74b4b;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    font-size: 1.4rem;
+    color: #999;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    transition: 0.3s ease;
+    color: wheat;
+}
+
+.footer-social a:hover {
+    color: black;
+    background-color: #b74b4b;
+    transform: scale(1.1);
+}
+
+/* TYPING TEXT ANIMATION FIX */
+.typing-text span {
+    color: #b74b4b;
+    position: relative;
+    display: inline-block;
+    min-width: 280px;
+}
+
+/* Remove the CSS-only typing animation since we're using JavaScript */
+.typing-text span::before,
+.typing-text span::after {
+    display: none;
+}
+
+/* SKILL PROGRESS ANIMATION ENHANCEMENT */
+.skill-progress {
+    transition: width 2s ease-in-out;
+}
+
+/* SCROLL TO TOP BUTTON (Optional but recommended) */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #b74b4b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background-color: #d35656;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(183, 75, 75, 0.3);
+}
+
+/* SMOOTH SCROLL BEHAVIOR */
+html {
+    scroll-behavior: smooth;
+}
+
+/* SECTION ENTRANCE ANIMATIONS */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE FIXES FOR FOOTER */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-social {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .typing-text span {
+        min-width: 200px;
+        font-size: 2rem;
+    }
+}
+
+/* ENHANCED FOCUS STATES FOR ACCESSIBILITY */
+*:focus {
+    outline: 2px solid #b74b4b;
+    outline-offset: 2px;
+}
+
+.btn:focus,
+.contact-btn:focus,
+.hire-btn:focus {
+    outline: 3px solid #b74b4b;
+    outline-offset: 3px;
+}
+
+/* PRINT STYLES (Optional) */
+@media print {
+    .loader,
+    .hamburger,
+    .scroll-top,
+    .modal {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ANIMATION PERFORMANCE OPTIMIZATION */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* CARD FLIP ANIMATION FALLBACK */
+@supports not (transform-style: preserve-3d) {
+    .glass-card:hover {
+        transform: scale(1.05);
+    }
+    
+    .card-inner {
+        transition: opacity 0.3s;
+    }
+    
+    .glass-card.flipped .card-front {
+        opacity: 0;
+    }
+    
+    .glass-card.flipped .card-back {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* HIGH CONTRAST MODE SUPPORT */
+@media (prefers-contrast: high) {
+    * {
+        border-color: white !important;
+    }
+    
+    .btn,
+    .contact-btn,
+    .hire-btn {
+        border-width: 3px;
+    }
+}
+
+/* CUSTOM SCROLLBAR - RED DESIGN */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-left: 1px solid #b74b4b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b74b4b;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d35656;
+    box-shadow: 0 0 10px #b74b4b;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #b74b4b #0a0a0a;
+}
+
+/* REMOVE FOCUS BOX EFFECTS */
+*:focus {
+    outline: none;
+}
+
+/* Remove box effect from navigation - Update this in your existing CSS */
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    /* Remove any box styling */
+    background: none;
+    box-shadow: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    /* No box effect */
+    background: none;
+    box-shadow: none;
+}
+
+/* Update mobile nav to remove box effects */
+@media(max-width: 995px) {
+    nav a:hover,
+    nav a.active {
+        padding: 0; /* Remove padding */
+        border-radius: 0; /* Remove border radius */
+        border-bottom: 3px solid #b74b4b; /* Keep only bottom border */
+        background: none;
+        box-shadow: none;
+    }
+}
+
+/* LOADER STYLES - Make it more visible */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-inner {
+    display: flex;
+    gap: 1rem;
+}
+
+.loader-inner span {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #b74b4b;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+/* Make sure footer is visible */
+.footer {
+    background-color: #0a0a0a;
+    padding: 3rem 9%;
+    border-top: 2px solid #b74b4b;
+    margin-top: 5rem;
+}
+
+/* Remove section entrance animations that might hide content */
+section {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Fix header z-index to ensure it's above loader when hidden */
+header {
+    z-index: 1000;
+}
+
+/* CUSTOM SCROLLBAR - RED DESIGN WITH INCREASED THICKNESS */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 16px;  /* Increased from 12px to 16px */
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-left: 2px solid #b74b4b;  /* Increased border from 1px to 2px */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b74b4b;
+    border-radius: 8px;  /* Slightly increased radius for better proportion */
+    transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d35656;
+    box-shadow: 0 0 15px #b74b4b;  /* Enhanced glow effect */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: auto;  /* Changed from 'thin' to 'auto' for default thickness */
+    scrollbar-color: #b74b4b #0a0a0a;
+}
+
+/* Slightly thinner scrollbar on mobile devices */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 13px;
+    }
+}
+
+/* FIX ACHIEVEMENTS SECTION SPACING */
+.achievements {
+    padding-top: 6.5rem;  /* Increased from 5rem to match other sections */
+}
+
+/* CHANGE CARD TITLES COLOR FROM RED TO WHEAT */
+.card-front h3 {
+    font-size: 2.2rem;
+    color: wheat;  /* Changed from #b74b4b to wheat */
+    margin-bottom: 0.5rem;
+}
+
+/* Also update the back card title to wheat for consistency */
+.card-back h3 {
+    font-size: 1.8rem;
+    color: wheat;  /* Changed from #b74b4b to wheat */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid wheat;  /* Changed border color to match */
+    padding-bottom: 0.5rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Update media queries for larger screens */
+@media (min-width: 768px) {
+    .card-front h3 {
+        font-size: 2.6rem;
+        color: white;  /* Ensure wheat color on tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-front h3 {
+        font-size: 2.8rem;
+        color: white;  /* Ensure wheat color on desktop */
+    }
+    
+    .card-back h3 {
+        font-size: 2.2rem;
+        color: white;  /* Ensure wheat color on desktop */
+        border-bottom: 2px solid wheat;
+    }
+}
+
+/* ACHIEVEMENT ITEM STYLING - RED HEADINGS, WHITE DESCRIPTIONS */
+.achievement-item h4 {
+    color: #b74b4b;  /* Changed from white to red */
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;  /* Make it slightly bolder */
+}
+
+.achievement-item p {
+    color: white;  /* Changed from #ccc to white */
+    font-size: 1.2rem;
+}
+
+/* Update media queries for consistent colors */
+@media (min-width: 390px) {
+    .achievement-item h4 {
+        color: #b74b4b;  /* Red heading */
+    }
+    
+    .achievement-item p {
+        color: white;  /* White description */
+    }
+}
+
+@media (min-width: 600px) {
+    .achievement-item h4 {
+        font-size: 1.5rem;
+        color: #b74b4b;  /* Red heading */
+    }
+    
+    .achievement-item p {
+        font-size: 1.3rem;
+        color: white;  /* White description */
+    }
+}
+
+@media (min-width: 1024px) {
+    .achievement-item h4 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        color: #b74b4b;  /* Red heading */
+    }
+    
+    .achievement-item p {
+        font-size: 1.4rem;
+        color: white;  /* White description */
+    }
+}
+
+/* Optional: Add hover effect for better interactivity */
+.achievement-item:hover h4 {
+    color: #d35656;  /* Lighter red on hover */
+} 
+
+/* TECH STACK BUTTON EFFECT IN EXPERIENCE */
+.experience-content p:last-child {
+    font-style: normal;
+    color: white;
+    background-color: rgba(183, 75, 75, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    display: inline-block;
+    border: 2px solid #b74b4b;
+    transition: all 0.3s ease;
+    cursor: default;
+    margin-top: 1rem;
+}
+
+.experience-content p:last-child:hover {
+    background-color: rgba(183, 75, 75, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(183, 75, 75, 0.3);
+}
+
+.experience-content p:last-child strong {
+    color: #b74b4b;
+    font-weight: 600;
+}
+
+/* EDUCATION BOX WITH ICON */
+.education-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.education-box::before {
+    content: '\f19d';  /* FontAwesome graduation cap */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 4rem;
+    color: rgba(183, 75, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+.education-box:hover::before {
+    color: rgba(183, 75, 75, 0.2);
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* SKILLS BOX WITH ICON */
+.skills-box {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Different icons for each skill category */
+.skills-box:nth-child(1)::before {
+    content: '\f121';  /* Code icon for Programming Languages */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+    color: rgba(183, 75, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-box:nth-child(2)::before {
+    content: '\f1c0';  /* Database icon for Libraries/Frameworks */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+    color: rgba(183, 75, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-box:nth-child(3)::before {
+    content: '\f544';  /* Robot icon for LLMs & AI */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+    color: rgba(183, 75, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-box:nth-child(4)::before {
+    content: '\f085';  /* Gears icon for Tools & Technologies */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+    color: rgba(183, 75, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-box:hover::before {
+    color: rgba(183, 75, 75, 0.2);
+    transform: rotate(-15deg) scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .education-box::before,
+    .skills-box::before {
+        font-size: 3rem;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .experience-content p:last-child {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Alternative: Add icons to section headings */
+.skills-box h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Optional: Add small icons before each skill category title */
+.skills-box h3::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 2rem;
+    color: #b74b4b;
+}
+
+.skills-box:nth-child(1) h3::before {
+    content: '\f121';  /* Code icon */
+}
+
+.skills-box:nth-child(2) h3::before {
+    content: '\f1c0';  /* Database icon */
+}
+
+.skills-box:nth-child(3) h3::before {
+    content: '\f544';  /* Robot icon */
+}
+
+.skills-box:nth-child(4) h3::before {
+    content: '\f085';  /* Gears icon */
+}
+
+/* Education section heading icons */
+.education-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.education-content h3::before {
+    content: '\f19d';  /* Graduation cap */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 2rem;
+    color: #b74b4b;
+}
+
+/* Add floating animation to background icons */
+@keyframes float-icon {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-10px) rotate(5deg); 
+    }
+}
+
+.education-box:hover::before,
+.skills-box:hover::before {
+    animation: float-icon 3s ease-in-out infinite;
+}
+
+/* REDUCE GAP BETWEEN HEADING AND CARDS */
+.achievements .heading {
+    margin-bottom: 3.5rem;  /* Reduced from default 5rem (30% reduction) */
+}
+
+/* Alternative: If the gap is from carousel padding */
+.glass-carousel {
+    padding: 2.8rem 0;  /* Reduced from 4rem (30% reduction) */
+}
+
+/* REDUCE CARD HEIGHT BY 10% */
+.glass-card {
+    height: 31.5rem;  /* Reduced from 35rem (10% reduction) */
+}
+
+/* Update media query heights accordingly */
+@media (min-width: 390px) {
+    .glass-card {
+        height: 34.2rem;  /* Reduced from 38rem */
+    }
+}
+
+@media (min-width: 600px) {
+    .glass-card {
+        height: 36rem;  /* Reduced from 40rem */
+    }
+}
+
+@media (min-width: 768px) {
+    .glass-card {
+        height: 37.8rem;  /* Reduced from 42rem */
+    }
+}
+
+@media (min-width: 1024px) {
+    .glass-card {
+        height: 40.5rem;  /* Reduced from 45rem */
+    }
+}
+
+@media (min-width: 1200px) {
+    .glass-card {
+        height: 43.2rem;  /* Reduced from 48rem */
+    }
+}
+
+/* Adjust icon and font sizes to fit better in smaller cards */
+.card-icon {
+    width: 6.5rem;  /* Slightly reduced */
+    height: 6.5rem;
+    margin-bottom: 1.2rem;  /* Reduced margin */
+}
+
+.card-icon i {
+    font-size: 2.8rem;  /* Slightly reduced */
+}
+
+.card-front h3 {
+    font-size: 2rem;  /* Slightly reduced */
+    margin-bottom: 0.3rem;
+}
+
+/* Adjust back card padding for better fit */
+.card-back {
+    padding: 1.2rem;  /* Reduced padding */
+}
+
+.card-back h3 {
+    font-size: 1.6rem;  /* Slightly reduced */
+    margin-bottom: 0.8rem;
+}
+
+/* RESTORE ORIGINAL CARD SIZES */
+.glass-card {
+    height: 35rem;  /* Original mobile size */
+}
+
+/* Restore all media query heights */
+@media (min-width: 390px) {
+    .glass-card {
+        height: 38rem;  /* Original size */
+    }
+}
+
+@media (min-width: 600px) {
+    .glass-card {
+        height: 40rem;  /* Original size */
+    }
+}
+
+@media (min-width: 768px) {
+    .glass-card {
+        height: 42rem;  /* Original size */
+    }
+}
+
+@media (min-width: 1024px) {
+    .glass-card {
+        height: 45rem;  /* Original size */
+    }
+}
+
+@media (min-width: 1200px) {
+    .glass-card {
+        height: 48rem;  /* Original size */
+    }
+}
+
+/* Restore original icon and text sizes */
+.card-icon {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon i {
+    font-size: 3rem;
+}
+
+.card-front h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-back {
+    padding: 1.5rem;
+}
+
+.card-back h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Restore gap but keep it slightly reduced */
+.glass-carousel {
+    padding: 3rem 0;  /* Slightly less than original 4rem */
+}
+
+/* Since you only have 2 items now, adjust the achievement items to be more spaced */
+.achievement-item {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;  /* Increased padding */
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;  /* Increased margin */
+    width: 100%;
+    border-left: 3px solid #b74b4b;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+/* Center content vertically when there are fewer items */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Or use 'center' if you want vertical centering */
+    padding-top: 1rem;  /* Add some top padding */
+}
+
+/* Media query adjustments for larger screens with less content */
+@media (min-width: 1024px) {
+    .achievement-item {
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .achievement-item h4 {
+        font-size: 1.8rem;
+    }
+    
+    .achievement-item p {
+        font-size: 1.5rem;
+    }
+}
+
+/* REDUCE GAP BETWEEN HEADING AND CARDS */
+.achievements .heading {
+    margin-bottom: 2rem;  /* Reduced from default 5rem */
+}
+
+.glass-carousel {
+    padding: 2rem 0;  /* Reduced from 4rem */
+}
+
+/* REDUCE CARD SIZES */
+.glass-card {
+    height: 28rem;  /* Reduced for better fit */
+}
+
+@media (min-width: 390px) {
+    .glass-card {
+        height: 30rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .glass-card {
+        height: 32rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .glass-card {
+        height: 34rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .glass-card {
+        height: 36rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .glass-card {
+        height: 38rem;
+    }
+}
+
+/* ADD MORE SPACE BETWEEN CARD TITLES (Back of card) */
+.card-back h3 {
+    font-size: 1.8rem;
+    color: wheat;
+    margin-bottom: 2.5rem;  /* Increased from 1rem for more space */
+    border-bottom: 2px solid wheat;
+    padding-bottom: 1rem;  /* Added padding for more breathing room */
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Adjust content spacing */
+.card-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;  /* Increased gap between achievement items */
+}
+
+/* Adjust card back padding */
+.card-back {
+    padding: 2rem;  /* Increased padding for less cramped feel */
+}
+
+/* Adjust achievement items for better spacing */
+.achievement-item {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;  /* Increased padding */
+    border-radius: 0.8rem;
+    margin-bottom: 0;
+    width: 100%;
+    border-left: 3px solid #b74b4b;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .card-back h3 {
+        font-size: 2rem;
+        margin-bottom: 3rem;  /* Even more space on larger screens */
+        padding-bottom: 1.2rem;
+    }
+    
+    .card-content {
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-back {
+        padding: 2.5rem;
+    }
+    
+    .card-back h3 {
+        font-size: 2.2rem;
+        margin-bottom: 3.5rem;
+    }
+    
+    .achievement-item {
+        padding: 1.8rem;
+    }
+}
+
+/* Ensure card icon and front title have proper spacing */
+.card-icon {
+    margin-bottom: 2rem;  /* Increased for less cramped look */
+}
+
+.card-front h3 {
+    margin-bottom: 1rem;  /* Added more space below front title */
+}
+
