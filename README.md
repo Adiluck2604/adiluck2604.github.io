@@ -17,4 +17,4 @@ Welcome to my Personal Portfolio Website! This website showcases my skills, proj
   - JavaScript (Vanilla JS, DOM Manipulation)
 
 ## Live Demo
-[View Website] - [(https://your-username.github.io/portfolio/)  ](https://adiluck2604.github.io)
+[View Website] - [(https://adiluck2604.github.io)]
