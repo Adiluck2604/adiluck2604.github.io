@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let touchEndTime = 0;
         let touchStartX = 0;
         let touchStartY = 0;
-        
+         
         card.addEventListener('touchstart', function(e) {
             touchStartTime = new Date().getTime();
             touchStartX = e.touches[0].clientX;
