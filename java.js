@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get all sections and nav links
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('nav a');
-        
+         
         // Get current scroll position
         const scrollPosition = window.scrollY + 100; // Add offset for header
         
