@@ -190,6 +190,8 @@ section[id] {
     min-height: 280px;
     border-radius: 50%;
     object-fit: cover;
+    transform: scale(0.9);
+    object-position: 60% 15%;  /* Moved slightly right (52%) and down (25%) */
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
